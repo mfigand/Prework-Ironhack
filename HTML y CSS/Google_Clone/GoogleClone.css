@@ -1,0 +1,102 @@
+header {
+	text-align: right;
+	font: small arial,sans-serif;
+	color: #999999;
+}
+a {
+	text-decoration: none;
+}
+
+a:link {
+	color: #444444;
+}
+a:visited {
+	color: #444444;
+}
+a:hover {
+	color: #444444;
+	text-decoration: underline;
+}
+
+.share {
+	background-color: #DCD9D9;
+}
+.imgbell {
+	height: 20px;
+	width: 20px;
+}
+.imgprofile {
+	border-radius: 50%;
+	height: 32px;
+	width: 25px;
+}
+nav {
+	text-align: center;
+	padding: 112px;
+	margin:auto;
+}
+
+.imgGoogle {
+	width: 272px;
+	margin: auto;
+}
+
+article{
+	text-align: center;
+}
+.searchBox {
+	text-align: right;
+	width: 600px;
+    padding: 2px;
+    padding-left: 2px;
+    border: 1px solid #888888;
+    margin: auto;
+}
+.imgMic {
+	height: 32px;
+	width: 32px;
+	margin: auto;
+}
+.searchButton {
+	font: small arial,sans-serif;
+	text-align: center;
+	width: 600px;
+	padding-left: 5px;
+	padding-right: 5px;
+    border: 1px solid #888888;
+    margin-top: 30px;
+    background-color: #DCD9D9;
+}
+footer {
+	color: #444444;
+	font-size: 10px;
+	text-align: ;
+	background-color: #DCD9D9;
+	border-top: 5px solid white;
+	height: 40px;
+	margin: auto;
+}
+
+.Foot1 {
+	font-size: 13.5px;
+	font: small arial,sans-serif;
+	word-spacing: 4px;
+	padding-right: 310px;
+	padding-left: 20px;
+	margin: auto;
+}
+.Foot2 {
+	font-size: 13.5px;
+	font: small arial,sans-serif;
+	padding-right: 10px;
+	padding-left: 260px;
+	margin: auto;
+}
+.Foot3 {
+	font-size: 13.5px;
+	font: small arial,sans-serif;
+	word-spacing: 5px;
+	padding-right: 10px;
+	padding-left: 5px;
+	margin: auto;
+}

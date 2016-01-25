@@ -1,0 +1,92 @@
+
+header {
+	box-shadow: 10px 5px 5px #888888;
+}
+
+header:hover {
+	background-color: white;
+	box-shadow: 10px 5px 5px #888888;
+}
+body a:link {
+	color: blue;
+}
+nav {
+	box-shadow: 10px 5px 5px #888888;
+	text-align: center;
+}
+
+nav a:link {
+	color: #FFFFFF
+}
+
+nav a:visited {
+	color: #CCCCCC
+}
+
+nav a:hover {
+	color: #999999
+}
+
+p {
+  background-color: ;
+}
+
+h1 {
+	font-size: 40px;	
+}
+
+article {
+	background-color: #bbb;
+	width: 400px;
+	margin: left;
+	text-align: center;
+	box-shadow: 10px 5px 5px #888888;
+}
+
+article img {
+	float: right;
+}
+
+footer {
+	font-size: 10px;
+	background-color: #444444;
+	border-top: 50px solid white;
+	color: white;
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	box-shadow: 10px 5px 5px #888888;
+}
+
+footer a:link {
+	color: #FFFFFF
+}
+
+footer a:visited {
+	color: #CCCCCC
+}
+
+footer a:hover {
+	color: #999999
+}
+
+.articleContainer {
+	font-size: 30px;
+	background-color:#FFFFFF;
+}
+
+.author {
+	font-size: 20px
+}
+
+.heading {
+	font-family: serif;
+	 background-color: ;
+	 text-align: center;
+}
+
+.post {
+	font-family: sans-serif;
+	 background-color: ;
+	 
+}
