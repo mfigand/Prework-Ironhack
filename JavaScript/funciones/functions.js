@@ -238,26 +238,36 @@ function arrangeElements( array )
 }
 
 function beautifyLetters( array )
-{
-	var newArray = []
-    for (var index = 0; index < array.length; index++) {
-         
-       if (array[index] === "a" || array[index] === "e" || array[index] === "i" || array[index] === "o" || array[index] === "u"){
-           
-          newArray[index] = array[index].toUpperCase()
-       }
-       else if (array[index] === "A" || array[index] === "E" || array[index] === "I" || array[index] === "O" || array[index] === "U") {
-           
-           newArray[index] = array[index].toUpperCase()
-       }
-       else {
-           newArray[index] = array[index].toString().toLowerCase()
-       }
-    }
-    return newArray
+{  
+  var newArray = []
+  for (var index = 0; index < array.length; index++) {
+       
+     if (isNaN(array[index])) {
+      newArray[index] = letters(array[index]);
+     }
+     else {
+      newArray[index] = array[index];
+     }
+  }
+  return newArray;
+}
+
+function letters(array){
+  if ( array === "a" || array === "e" || array === "i" || array === "o" || array === "u"){
+    array = array.toUpperCase()
+  }
+  else if (array === "A" || array === "E" || array === "I" || array === "O" || array === "U") {
+    array = array.toUpperCase()
+  }
+  else {
+    array = array.toLowerCase()
+  }
+
+  return array
+}
 	//It receives an array with numbers and letters and returns it with uppercase vowels and lowercase consonants. Numbers remain unchanged
 	//Example: beautifyLetters([1,5,7,'a','J',p,'E']) returns [1,5,7,'A','j',p,'E']
-}
+
 
 
 function beautifyNumbers( array )
@@ -313,12 +323,8 @@ function sortArray( array )
 
 function arrayToString( array )
 {
-   var cadena = array.toString()
-    for (i=0; i<cadena.length; i++){
-        cadena=cadena.replace(",",'');
-        cadena=cadena.replace(',','');
-    }
-    return cadena
+   var array = array.join("")
+    return array
 
 	//It receives an array and returns a string with all its elements.
 	//Example: arrayToString([1, 4, 5, 5, 'A', 'b', 'E', 'j']) returns "1455AbEj"

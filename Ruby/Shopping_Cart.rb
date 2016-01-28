@@ -1,17 +1,20 @@
 class ShoppingCart
-	def initialize
-		@base_price = 0
-		@items = []
-	end
-	def add_item (item)
+  def initialize
+    @base_price = 0
+    @items = []
+  end
+  def add_items (item)
   	@items.push (item)
-    end
-    def price_of_my_cart
-	total_price_of_my_cart = @base_price
-	for item in @items
-		total_price_of_my_cart += item.price
-	end
-  total_price_of_my_cart
+  end
+  def checkout
+  	checkout = @base_price
+  	for i in @items
+  		checkout+= i.price
+  	end
+  	if @items.length > 5
+  		checkout = checkout * 0.90
+  	end
+  	puts "Your Total today is $#{checkout} Have a nice day"
   end
 end
 
@@ -21,15 +24,14 @@ class Item
 		@name = name
 		@price = price
 	end
-	def price
-		price = price
-	end
 end
 
 class Houseware < Item
-	def price
-		if (price > 100)
-			price = price * 0.95
+	def price 
+		if @price > 100
+			@price = @price * 0.95
+		else
+			@price
 		end
 	end
 end
@@ -38,8 +40,10 @@ class Fruit < Item
 	def price
 		t = Time.now.strftime("%a")
 		if (t == "Sat" || t == "Sun")
-	     price = price * 0.9
-        end
+     	@price = @price * 0.9
+    else
+     	@price
+    end
 	end
 end
 
@@ -51,8 +55,11 @@ rice = Item.new "Rice", 1
 vacuum_cleaner = Houseware.new "Vacuum Cleaner", 150
 anchovies = Item.new "Anchovies", 2
 
-my_cart.add_item(banana)
-my_cart.add_item(orange_juice)
+my_cart.add_items(banana)
+my_cart.add_items(orange_juice)
+my_cart.add_items(rice)
+my_cart.add_items(vacuum_cleaner)
+my_cart.add_items(anchovies)
+my_cart.add_items(anchovies)
 
-puts my_cart.price_of_my_cart
-
+puts my_cart.checkout
