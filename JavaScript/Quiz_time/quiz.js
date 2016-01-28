@@ -115,17 +115,12 @@ user.incorrect = incorrect
 function showResults(user) {
   console.log(user);
 // display the user results
-
 }
 
-
-
-question1();
 question2();
 question3();
 question4();
 question5();
 evaluate(responses);
-
 
 
